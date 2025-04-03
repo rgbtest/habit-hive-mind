@@ -19,5 +19,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: mode === 'production' ? '/habit-hive-mind/' : '/',
+  base: '/habit-hive-mind/',
 }));
