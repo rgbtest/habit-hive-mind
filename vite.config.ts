@@ -19,6 +19,15 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Use process.env.NODE_ENV to determine the base path
-  base: process.env.NODE_ENV === 'production' ? '/habit-hive-mind/' : '/',
+  base: '/habit-hive-mind/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
 }));

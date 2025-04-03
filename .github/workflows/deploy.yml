@@ -30,7 +30,8 @@ jobs:
     
     - name: Build
       run: |
-        NODE_ENV=production npm run build
+        npm run build
+        cp public/404.html dist/
         ls -la dist/
     
     - name: Deploy to GitHub Pages
